@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration xmlns="http://www.jooq.org/xsd/jooq-codegen-3.12.0.xsd">
+    <logging>INFO</logging>
+    <jdbc>
+        <driver>com.mysql.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/pandect</url>
+        <user>root</user>
+        <password>123456</password>
+    </jdbc>
+    <generator>
+        <database>
+            <name>org.jooq.meta.mysql.MySQLDatabase</name>
+            <includes>.*</includes>
+            <excludes></excludes>
+            <inputSchema>pandect</inputSchema>
+            <forcedTypes>
+                <forcedType>
+                    <userType>com.zhenhui.pandect.data.enums.PandectType</userType>
+                    <converter>com.zhenhui.pandect.data.converter.PandectTypeConverter</converter>
+                    <includeExpression>.*\.pandect\.type</includeExpression>
+                </forcedType>
+                <forcedType>
+                    <userType>com.zhenhui.pandect.data.enums.PandectStatus</userType>
+                    <converter>com.zhenhui.pandect.data.converter.PandectStatusConverter</converter>
+                    <includeExpression>.*\.pandect\.status</includeExpression>
+                </forcedType>
+                <forcedType>
+                    <userType>com.zhenhui.pandect.data.domain.Pronounce</userType>
+                    <converter>com.zhenhui.pandect.data.converter.PronounceConverter</converter>
+                    <includeExpression>.*\.annotation\.pronounce</includeExpression>
+                </forcedType>
+                <forcedType>
+                    <userType>com.zhenhui.pandect.data.domain.ContentMarks</userType>
+                    <converter>com.zhenhui.pandect.data.converter.ContentMarksConverter</converter>
+                    <includeExpression>.*\.annotation\.content_marks</includeExpression>
+                </forcedType>
+            </forcedTypes>
+        </database>
+
+        <generate>
+            <!-- Generation flags: See advanced configuration properties -->
+            <javaTimeTypes>true</javaTimeTypes>
+        </generate>
+
+        <target>
+            <packageName>com.zhenhui.pandect.data</packageName>
+            <directory>target/generated-sources/jooq</directory>
+        </target>
+    </generator>
+</configuration>
