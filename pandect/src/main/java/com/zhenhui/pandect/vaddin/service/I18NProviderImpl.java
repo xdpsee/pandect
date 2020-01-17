@@ -1,4 +1,4 @@
-package com.zhenhui.pandect.vaddin.services;
+package com.zhenhui.pandect.vaddin.service;
 
 import com.vaadin.flow.i18n.I18NProvider;
 import lombok.extern.slf4j.Slf4j;

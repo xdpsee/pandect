@@ -11,8 +11,8 @@ import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.StreamResource;
 import com.vaadin.flow.server.VaadinSession;
-import com.zhenhui.pandect.vaddin.services.SecurityService;
-import com.zhenhui.pandect.vaddin.views.main.MainView;
+import com.zhenhui.pandect.vaddin.service.SecurityService;
+import com.zhenhui.pandect.vaddin.views.login.LoginView;
 import com.zhenhui.pandect.vaddin.views.pages.DashboardView;
 import com.zhenhui.pandect.vaddin.views.pages.ProfileView;
 import com.zhenhui.pandect.vaddin.views.pages.TrendsView;
@@ -20,7 +20,7 @@ import com.zhenhui.pandect.vaddin.views.pages.TrendsView;
 import static com.vaadin.flow.component.icon.VaadinIcon.*;
 
 @Route
-public class MainLayout extends AppLayoutRouterLayout<LeftLayouts.LeftResponsiveHybrid> {
+public class AppLayout extends AppLayoutRouterLayout<LeftLayouts.LeftResponsiveHybrid> {
 
     public static final String ITM_DASHBOARD = "mainview.menue.item.dashboard";
     public static final String ITM_PROFILE = "mainview.menue.item.profile";
@@ -29,11 +29,10 @@ public class MainLayout extends AppLayoutRouterLayout<LeftLayouts.LeftResponsive
     public static final String TITLE = "mainview.app.title";
     private static final String LOGO_PNG = "logo.png";
 
-    public MainLayout() {
-        Image imageLogo = new Image(new StreamResource(LOGO_PNG, () -> MainLayout.class.getResourceAsStream("/" + LOGO_PNG)),
+    public AppLayout() {
+        Image imageLogo = new Image(new StreamResource(LOGO_PNG, () -> AppLayout.class.getResourceAsStream("/" + LOGO_PNG)),
                 "Vaadin Logo"
         );
-
         //app layout specific
         imageLogo.setHeight("var(--app-layout-menu-button-height)");
 
@@ -58,7 +57,7 @@ public class MainLayout extends AppLayoutRouterLayout<LeftLayouts.LeftResponsive
                     VaadinSession session = ui.getSession();
                     session.setAttribute(SecurityService.User.class, null);
                     session.close();
-                    ui.navigate(MainView.class);
+                    ui.navigate(LoginView.class);
                 })).build();
     }
 }

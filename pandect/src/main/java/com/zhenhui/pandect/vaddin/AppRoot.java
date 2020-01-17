@@ -9,8 +9,8 @@ import com.zhenhui.pandect.vaddin.views.main.MainView;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@Route(value = VaddinApp.NAVIGATION_ROOT, layout = MainLayout.class)
-public class VaddinApp extends Composite<Div> {
+@Route(value = AppRoot.NAVIGATION_ROOT, layout = AppLayout.class)
+public class AppRoot extends Composite<Div> {
 
     public static final String NAVIGATION_ROOT = "";
 
