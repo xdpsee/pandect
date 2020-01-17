@@ -1,4 +1,4 @@
-package com.zhenhui.pandect.vaddin.service;
+package com.zhenhui.pandect.vaadin.service;
 
 import org.rapidpm.frp.Transformations;
 

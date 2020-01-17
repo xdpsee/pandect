@@ -1,11 +1,11 @@
-package com.zhenhui.pandect.vaddin;
+package com.zhenhui.pandect.vaadin;
 
 import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.Route;
-import com.zhenhui.pandect.vaddin.views.main.MainView;
+import com.zhenhui.pandect.vaadin.views.main.MainView;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

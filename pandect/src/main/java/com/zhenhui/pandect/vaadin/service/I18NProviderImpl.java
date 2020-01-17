@@ -1,4 +1,4 @@
-package com.zhenhui.pandect.vaddin.service;
+package com.zhenhui.pandect.vaadin.service;
 
 import com.vaadin.flow.i18n.I18NProvider;
 import lombok.extern.slf4j.Slf4j;
@@ -24,7 +24,6 @@ public class I18NProviderImpl implements I18NProvider {
         log.info("I18NProviderImpl02 was found..");
     }
 
-
     private final ResourceBundleService resourceBundleService = new ResourceBundleService();
 
     @Override
@@ -36,7 +35,6 @@ public class I18NProviderImpl implements I18NProvider {
     @Override
     public String getTranslation(String key, Locale locale, Object... params) {
         log.info("VaadinI18NProvider getTranslation.. key : " + key + " - " + locale);
-
 
         final ResourceBundle resourceBundle = resourceBundleService
                 .resourceBundleToUse()

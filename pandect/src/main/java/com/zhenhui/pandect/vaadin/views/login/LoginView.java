@@ -1,4 +1,4 @@
-package com.zhenhui.pandect.vaddin.views.login;
+package com.zhenhui.pandect.vaadin.views.login;
 
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.Text;
@@ -12,8 +12,8 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.lumo.Lumo;
-import com.zhenhui.pandect.vaddin.service.SecurityService;
-import com.zhenhui.pandect.vaddin.views.main.MainView;
+import com.zhenhui.pandect.vaadin.service.SecurityService;
+import com.zhenhui.pandect.vaadin.views.main.MainView;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -54,7 +54,7 @@ public class LoginView extends Composite<HorizontalLayout> {
         H1 title = new H1();
         title.getStyle().set("color", "var(--lumo-base-color)");
         title.add(icon);
-        title.add(new Text("Pandect Admin"));
+        title.add(new Text("Pandect"));
         overlay.setTitle(title);
 
         LoginI18n i18n = LoginI18n.createDefault();

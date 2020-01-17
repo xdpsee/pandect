@@ -1,4 +1,4 @@
-package com.zhenhui.pandect.vaddin;
+package com.zhenhui.pandect.vaadin;
 
 import com.github.appreciated.app.layout.component.applayout.LeftLayouts;
 import com.github.appreciated.app.layout.component.builder.AppLayoutBuilder;
@@ -11,22 +11,22 @@ import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.StreamResource;
 import com.vaadin.flow.server.VaadinSession;
-import com.zhenhui.pandect.vaddin.service.SecurityService;
-import com.zhenhui.pandect.vaddin.views.login.LoginView;
-import com.zhenhui.pandect.vaddin.views.pages.DashboardView;
-import com.zhenhui.pandect.vaddin.views.pages.ProfileView;
-import com.zhenhui.pandect.vaddin.views.pages.TrendsView;
+import com.zhenhui.pandect.vaadin.service.SecurityService;
+import com.zhenhui.pandect.vaadin.views.login.LoginView;
+import com.zhenhui.pandect.vaadin.views.pages.DashboardView;
+import com.zhenhui.pandect.vaadin.views.pages.ProfileView;
+import com.zhenhui.pandect.vaadin.views.pages.TrendsView;
 
 import static com.vaadin.flow.component.icon.VaadinIcon.*;
 
 @Route
 public class AppLayout extends AppLayoutRouterLayout<LeftLayouts.LeftResponsiveHybrid> {
 
-    public static final String ITM_DASHBOARD = "mainview.menue.item.dashboard";
-    public static final String ITM_PROFILE = "mainview.menue.item.profile";
-    public static final String ITM_TRENDS = "mainview.menue.item.trends";
-    public static final String ITM_LOGOUT = "mainview.menue.item.logout";
-    public static final String TITLE = "mainview.app.title";
+    public static final String ITM_DASHBOARD = "main_view.menu.item.dashboard";
+    public static final String ITM_PROFILE = "main_view.menu.item.profile";
+    public static final String ITM_TRENDS = "main_view.menu.item.trends";
+    public static final String ITM_LOGOUT = "main_view.menu.item.logout";
+    public static final String TITLE = "main_view.app.title";
     private static final String LOGO_PNG = "logo.png";
 
     public AppLayout() {
