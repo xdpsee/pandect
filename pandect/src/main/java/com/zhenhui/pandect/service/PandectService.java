@@ -6,10 +6,12 @@ import com.zhenhui.pandect.service.query.CreatePandectBody;
 import com.zhenhui.pandect.service.result.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @Slf4j
-@RestController("/pandect")
+@RestController
+@RequestMapping(value = "/pandect", produces = MediaType.APPLICATION_JSON_VALUE)
 public class PandectService {
 
     @Autowired
