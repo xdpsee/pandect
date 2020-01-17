@@ -1,4 +1,4 @@
-package com.zhenhui.pandect.vaadin.service.flow;
+package com.zhenhui.pandect.vaadin.flow;
 
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.router.BeforeEnterEvent;
@@ -7,7 +7,7 @@ import com.vaadin.flow.server.ServiceInitEvent;
 import com.vaadin.flow.server.UIInitListener;
 import com.vaadin.flow.server.VaadinServiceInitListener;
 import com.vaadin.flow.server.VaadinSession;
-import com.zhenhui.pandect.vaadin.service.SecurityService;
+import com.zhenhui.pandect.service.SecurityService;
 import com.zhenhui.pandect.vaadin.views.login.LoginView;
 import lombok.extern.slf4j.Slf4j;
 import org.rapidpm.frp.model.Result;

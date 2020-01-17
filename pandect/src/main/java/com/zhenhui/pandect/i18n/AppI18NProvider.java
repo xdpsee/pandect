@@ -1,6 +1,7 @@
-package com.zhenhui.pandect.vaadin.service;
+package com.zhenhui.pandect.i18n;
 
 import com.vaadin.flow.i18n.I18NProvider;
+import com.zhenhui.pandect.service.ResourceBundleService;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
@@ -15,13 +16,13 @@ import static org.rapidpm.frp.model.Result.failure;
 import static org.rapidpm.frp.model.Result.success;
 
 @Slf4j
-public class I18NProviderImpl implements I18NProvider {
+public class AppI18NProvider implements I18NProvider {
 
     public static final String NULL_KEY = "###-NULL-KEY-###";
     public static final String EMPTY_KEY = "###-EMPTY-KEY-###";
 
-    public I18NProviderImpl() {
-        log.info("I18NProviderImpl02 was found..");
+    public AppI18NProvider() {
+        log.info("AppI18NProvider was found..");
     }
 
     private final ResourceBundleService resourceBundleService = new ResourceBundleService();
@@ -34,7 +35,7 @@ public class I18NProviderImpl implements I18NProvider {
 
     @Override
     public String getTranslation(String key, Locale locale, Object... params) {
-        log.info("VaadinI18NProvider getTranslation.. key : " + key + " - " + locale);
+        log.info("AppI18NProvider getTranslation.. key : " + key + " - " + locale);
 
         final ResourceBundle resourceBundle = resourceBundleService
                 .resourceBundleToUse()

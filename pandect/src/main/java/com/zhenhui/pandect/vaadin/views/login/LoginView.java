@@ -12,7 +12,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.lumo.Lumo;
-import com.zhenhui.pandect.vaadin.service.SecurityService;
+import com.zhenhui.pandect.service.SecurityService;
 import com.zhenhui.pandect.vaadin.views.main.MainView;
 import lombok.extern.slf4j.Slf4j;
 

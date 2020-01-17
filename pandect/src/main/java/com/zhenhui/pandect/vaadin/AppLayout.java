@@ -11,7 +11,7 @@ import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.StreamResource;
 import com.vaadin.flow.server.VaadinSession;
-import com.zhenhui.pandect.vaadin.service.SecurityService;
+import com.zhenhui.pandect.service.SecurityService;
 import com.zhenhui.pandect.vaadin.views.login.LoginView;
 import com.zhenhui.pandect.vaadin.views.pages.DashboardView;
 import com.zhenhui.pandect.vaadin.views.pages.ProfileView;

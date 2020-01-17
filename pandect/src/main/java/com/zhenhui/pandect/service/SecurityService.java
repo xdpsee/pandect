@@ -1,4 +1,4 @@
-package com.zhenhui.pandect.vaadin.service;
+package com.zhenhui.pandect.service;
 
 import org.rapidpm.frp.model.Result;
 import org.rapidpm.frp.model.serial.Pair;
